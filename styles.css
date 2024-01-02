@@ -1,0 +1,100 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Typography */
+h1 {
+    font-size: 50px;
+}
+
+.small {
+    font-size: 30px;
+}
+
+label {
+    font-size: 20px;
+}
+
+/* Box and Layout */
+.box {
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 50px auto;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+}
+
+.form_container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form_control {
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea_control {
+    grid-column: 1 / span 2;
+}
+
+/* Input and Form Elements */
+input, select, textarea {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.textarea_control textarea {
+    width: 100%;
+}
+
+@media (max-width: 460px) {
+    .textarea_control {
+        grid-column: 1 / span 1;
+    }
+}
+
+/* Button Styles */
+.button_container {
+    padding-left: 82%;
+    margin-top: 20px;
+}
+
+button {
+    background-color: var(--primary-color, red);
+    border: transparent solid 2px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+    font-size: 12px;
+}
+
+button:hover {
+    background-color: var(--hover-color, #ccc);
+    border: 2px solid var(--primary-color, red);
+    color: black;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+input:focus, button:focus {
+    outline-color: red;
+}
